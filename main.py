@@ -19,3 +19,9 @@ def read_item(item_id: int, q: Optional[str] = None):
 def webhook(item):
     print(item)
     return {"success": True}
+
+
+@app.post("/webhook/uplink")
+def uplink(item: dict):
+    print(item)
+    return {"success": True}
